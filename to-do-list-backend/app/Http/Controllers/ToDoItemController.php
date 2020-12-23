@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ToDoItemReqest;
+use App\Http\Requests\TodoItemUpdateRequest;
 use App\Models\ToDoItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -86,7 +87,7 @@ class ToDoItemController extends Controller
      * @param  \App\Models\ToDoItem  $toDoItem
      * @return \Illuminate\Http\Response
      */
-    public function update(ToDoItemReqest $request, ToDoItem $todo_item)
+    public function update(TodoItemUpdateRequest $request, ToDoItem $todo_item)
     {
       $validated = $request->validated();
 
